@@ -1,4 +1,5 @@
 import "../styles/display.css";
+import Buttons from "./Buttons";
 const buttons = [
   "AC",
   "+/-",
@@ -24,13 +25,8 @@ export default function CalcBody() {
   return (
     <div className="calc-body">
       {buttons.map((e, index) => {
-        return <Button data={e} key={index} />;
+        return <Buttons data={e} key={index} />;
       })}
     </div>
   );
-}
-function Button(probs) {
-  const { data } = probs;
-  let classBtn = "btn";
-  return <button className={classBtn}>{data}</button>;
 }

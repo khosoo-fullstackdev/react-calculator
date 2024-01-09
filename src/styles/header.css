@@ -1,10 +1,10 @@
-.header {
+.head {
   background-color: #333;
   display: flex;
   justify-content: flex-end;
   padding: 10px;
 }
-.header input {
+.head .display {
   display: flex;
   color: #fff;
   width: 100%;
