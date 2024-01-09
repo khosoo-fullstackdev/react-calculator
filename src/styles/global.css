@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#root {
+  display: flex;
+  justify-content: center;
+}
+.calc {
+  border: 2px solid;
+  width: 330px;
+  background-color: #111;
+  display: flex;
+  flex-direction: column;
+}
