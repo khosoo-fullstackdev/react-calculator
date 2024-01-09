@@ -1,10 +1,10 @@
-.head {
+.hd {
   background-color: #333;
   display: flex;
   justify-content: flex-end;
   padding: 10px;
 }
-.head .display {
+.display {
   display: flex;
   color: #fff;
   width: 100%;
