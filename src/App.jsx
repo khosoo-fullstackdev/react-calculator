@@ -3,7 +3,7 @@ import Button from "./components/Button";
 import ButtonOp from "./components/ButtonOp";
 import Screen from "./components/Screen";
 import "./styles/global.css";
-import { numberButtons, operatorButtons } from "./utils/constants";
+import { buttons } from "./utils/constants";
 
 export default function App() {
   const [currentSceen, setCurrentSceen] = useState("");
@@ -20,6 +20,22 @@ export default function App() {
       const result = Number(prevScreen) + Number(currentSceen) + "";
       setCurrentSceen(result);
     }
+    if (todoOp == "-") {
+      const result = Number(prevScreen) - Number(currentSceen) + "";
+      setCurrentSceen(result);
+    }
+    if (todoOp == "*") {
+      const result = Number(prevScreen) * Number(currentSceen) + "";
+      setCurrentSceen(result);
+    }
+    if (todoOp == "/") {
+      const result = Number(prevScreen) / Number(currentSceen) + "";
+      setCurrentSceen(result);
+    }
+    if (todoOp == "AC") {
+      const result = "";
+      setCurrentSceen(result);
+    }
   }
 
   function changeScreenVal(val) {
@@ -30,8 +46,18 @@ export default function App() {
     <div className="mainCalc">
       <Screen value={currentSceen} />
       <div className="buttons">
-        <div className="numbers">
-          {numberButtons.map((val, index) => {
+        {buttons.map((val, index) => {
+          if (
+            val != "AC" ||
+            val != "+" ||
+            val != "-" ||
+            val != "*" ||
+            val != "/" ||
+            val != "%" ||
+            val != "+/-" ||
+            val != "." ||
+            val != "="
+          )
             return (
               <Button
                 key={index}
@@ -39,20 +65,14 @@ export default function App() {
                 changeScreenVal={changeScreenVal}
               />
             );
-          })}
-        </div>
-        <div className="operators">
-          {operatorButtons.map((val, index) => {
+          else
             return (
               <ButtonOp key={index} value={val} changeTodoOp={changeTodoOp} />
             );
-          })}
-        </div>
-        <div>
-          <button className="btn" onClick={equalHandler}>
-            =
-          </button>
-        </div>
+        })}
+        <button className="btn" onClick={equalHandler}>
+          =
+        </button>
       </div>
     </div>
   );

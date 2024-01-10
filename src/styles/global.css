@@ -11,17 +11,10 @@
   flex-direction: column;
   gap: 20px;
 }
-.numbers {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-}
 .buttons {
   display: flex;
-}
-.operators button {
-  background-color: yellow;
-}
-.numbers button {
-  background-color: aqua;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 200px;
+  height: 300px;
 }
