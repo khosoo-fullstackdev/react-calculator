@@ -1,17 +1,27 @@
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-#root {
-  display: flex;
-  justify-content: center;
-}
-.calculator {
-  border: 2px solid;
+.mainCalc {
   width: 500px;
-  background-color: #111;
+  margin: auto;
+  padding: 100px;
   display: flex;
   flex-direction: column;
-  margin: auto;
+  gap: 20px;
+}
+.numbers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.buttons {
+  display: flex;
+}
+.operators button {
+  background-color: yellow;
+}
+.numbers button {
+  background-color: aqua;
 }

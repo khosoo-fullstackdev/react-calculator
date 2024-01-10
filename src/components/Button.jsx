@@ -1,32 +1,10 @@
-import "../styles/display.css";
-import Buttons from "./Buttons";
-const buttons = [
-  "AC",
-  "+/-",
-  "%",
-  "/",
-  "7",
-  "8",
-  "9",
-  "*",
-  "4",
-  "5",
-  "6",
-  "-",
-  "1",
-  "2",
-  "3",
-  "+",
-  "0",
-  ".",
-  "=",
-];
-export default function CalcBody() {
+import React from "react";
+import "../styles/button.css";
+
+export default function Button({ value, changeScreenVal }) {
   return (
-    <div className="calc-body">
-      {buttons.map((e, index) => {
-        return <Buttons data={e} key={index} />;
-      })}
-    </div>
+    <button className="btn" onClick={() => changeScreenVal(value)}>
+      {value}
+    </button>
   );
 }
