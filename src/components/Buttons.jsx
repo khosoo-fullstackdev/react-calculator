@@ -1,5 +1,5 @@
 export default function Buttons(probs) {
   const { data } = probs;
-  let classBtn = "btn";
-  return <button className={classBtn}>{data}</button>;
+  console.log(probs);
+  return ({ data } = <button className="btn"></button>);
 }

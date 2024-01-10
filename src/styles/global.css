@@ -9,8 +9,9 @@
 }
 .calculator {
   border: 2px solid;
-  width: 330px;
+  width: 500px;
   background-color: #111;
   display: flex;
   flex-direction: column;
+  margin: auto;
 }
