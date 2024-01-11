@@ -1,10 +1,9 @@
 import React from "react";
 import "../styles/button.css";
 
-export default function ButtonOp({ value, changeTodoOp }) {
-  console.log(value);
+export default function ButtonOp({ value, pressedBtn }) {
   return (
-    <button className="btn" onClick={() => changeTodoOp(value)}>
+    <button className="btn " onClick={() => pressedBtn(value)}>
       {value}
     </button>
   );
